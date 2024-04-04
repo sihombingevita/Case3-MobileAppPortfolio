@@ -1,0 +1,6 @@
+framework module Pods_MobileAppPortfolio {
+  umbrella header "Pods-MobileAppPortfolio-umbrella.h"
+
+  export *
+  module * { export * }
+}
