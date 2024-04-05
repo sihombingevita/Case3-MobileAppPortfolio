@@ -44,7 +44,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ViewController: UITableViewDataSource, UITableViewDelegate, DonutChartCellDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return chartData.count
     }
@@ -56,15 +56,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let data = chartData[indexPath.section].data
-        let model = chartData[indexPath.row].data
         
         if chartData[indexPath.section].type == "donutChart" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "donutChartCell", for: indexPath) as! DonutChartCell
             
             if case let .datumArray(datumArray) = data {
+                cell.delegate = self
+                cell.indexPath = indexPath
                 cell.configure(with: datumArray)
             }
             return cell
+            
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "lineChartCell", for: indexPath) as! LineChartCell
             if case let .dataClass(dataClass) = chartData[indexPath.section].data {
@@ -72,6 +74,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             }
             return cell
         }
+    }
+
+    func didSelectData(datum: PieChartDataEntry, at indexPath: IndexPath) {
+        
+        if case let .datumArray(datumArray) = chartData[indexPath.section].data {
+            let selectedDatum = datumArray[indexPath.row]
+            let detailViewController = DetailTableViewController()
+            detailViewController.selectedDatum = selectedDatum
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
+        
     }
 }
 

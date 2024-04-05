@@ -28,7 +28,6 @@ class LineChartCell: UITableViewCell, ChartViewDelegate {
                                                     height: self.lineView.frame.size.width))
         self.lineView.addSubview(lineChartView)
         
-        self.lineView.center = lineView.center
         let dataSet = LineChartDataSet(entries: dataEntries, label: "Line Chart")
         dataSet.colors = [UIColor.blue]
         dataSet.circleColors = [UIColor.blue]
@@ -42,7 +41,10 @@ class LineChartCell: UITableViewCell, ChartViewDelegate {
         lineChartView.data = LineChartData(dataSet: dataSet)
         lineChartView.xAxis.labelPosition = .bottom
         lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Jan", "Mar", "Mei", "Agu", "Okt", "Des"])
+        lineChartView.xAxis.labelCount = 6
+        lineChartView.xAxis.forceLabelsEnabled = true
         lineChartView.xAxis.granularity = 1
+        lineChartView.center = lineView.center
         
         lineChartView.rightAxis.enabled = false
         lineChartView.rightAxis.drawAxisLineEnabled = false

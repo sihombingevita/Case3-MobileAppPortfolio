@@ -20,8 +20,12 @@
 		0F689D972BB719AB006E007D /* MobileAppPortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F689D962BB719AB006E007D /* MobileAppPortfolioTests.swift */; };
 		0F689DA12BB719AB006E007D /* MobileAppPortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F689DA02BB719AB006E007D /* MobileAppPortfolioUITests.swift */; };
 		0F689DA32BB719AB006E007D /* MobileAppPortfolioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F689DA22BB719AB006E007D /* MobileAppPortfolioUITestsLaunchTests.swift */; };
+		0F8D7A112BBE9EC100C78D91 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D7A0F2BBE9EC100C78D91 /* DetailCell.swift */; };
+		0F8D7A122BBE9EC100C78D91 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F8D7A102BBE9EC100C78D91 /* DetailCell.xib */; };
 		0F9D0EE32BBC63A200A752F8 /* FileChart.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F9D0EE22BBC63A200A752F8 /* FileChart.json */; };
 		0F9D0EE52BBC63C100A752F8 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9D0EE42BBC63C100A752F8 /* ChartData.swift */; };
+		0FD77FBD2BBFC3F500E68ABE /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD77FBB2BBFC3F500E68ABE /* DetailTableViewController.swift */; };
+		0FD77FBE2BBFC3F500E68ABE /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD77FBC2BBFC3F500E68ABE /* DetailTableViewController.xib */; };
 		4CB63E1343332D212DE69F5D /* Pods_MobileAppPortfolioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F78929A2F6A2B6242413CD /* Pods_MobileAppPortfolioTests.framework */; };
 		A6A03F690AF9640C13E0C1CD /* Pods_MobileAppPortfolio_MobileAppPortfolioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2874CBF9DE6B2C11A831D6CC /* Pods_MobileAppPortfolio_MobileAppPortfolioUITests.framework */; };
 		C9D02B228E62DB5737FD4435 /* Pods_MobileAppPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64978CC508963F736E4BBEED /* Pods_MobileAppPortfolio.framework */; };
@@ -62,8 +66,12 @@
 		0F689D9C2BB719AB006E007D /* MobileAppPortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F689DA02BB719AB006E007D /* MobileAppPortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioUITests.swift; sourceTree = "<group>"; };
 		0F689DA22BB719AB006E007D /* MobileAppPortfolioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppPortfolioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F8D7A0F2BBE9EC100C78D91 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		0F8D7A102BBE9EC100C78D91 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		0F9D0EE22BBC63A200A752F8 /* FileChart.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FileChart.json; sourceTree = "<group>"; };
 		0F9D0EE42BBC63C100A752F8 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		0FD77FBB2BBFC3F500E68ABE /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		0FD77FBC2BBFC3F500E68ABE /* DetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
 		2874CBF9DE6B2C11A831D6CC /* Pods_MobileAppPortfolio_MobileAppPortfolioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAppPortfolio_MobileAppPortfolioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		457E85CA5387662999C4DE7D /* Pods-MobileAppPortfolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAppPortfolioTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileAppPortfolioTests/Pods-MobileAppPortfolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64978CC508963F736E4BBEED /* Pods_MobileAppPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAppPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +114,7 @@
 		0F19C50F2BB835EB00AA404D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0F8D7A0E2BBE9E8E00C78D91 /* Detail */,
 				0F19C5102BB8362200AA404D /* LineChartCell.swift */,
 				0F19C5112BB8362200AA404D /* LineChartCell.xib */,
 				0F19C5142BB8363C00AA404D /* DonutChartCell.swift */,
@@ -168,6 +177,17 @@
 				0F689DA22BB719AB006E007D /* MobileAppPortfolioUITestsLaunchTests.swift */,
 			);
 			path = MobileAppPortfolioUITests;
+			sourceTree = "<group>";
+		};
+		0F8D7A0E2BBE9E8E00C78D91 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0F8D7A0F2BBE9EC100C78D91 /* DetailCell.swift */,
+				0F8D7A102BBE9EC100C78D91 /* DetailCell.xib */,
+				0FD77FBB2BBFC3F500E68ABE /* DetailTableViewController.swift */,
+				0FD77FBC2BBFC3F500E68ABE /* DetailTableViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		B149CEDE6A45B0B12D2217F0 /* Pods */ = {
@@ -304,6 +324,8 @@
 			files = (
 				0F9D0EE32BBC63A200A752F8 /* FileChart.json in Resources */,
 				0F19C5132BB8362200AA404D /* LineChartCell.xib in Resources */,
+				0F8D7A122BBE9EC100C78D91 /* DetailCell.xib in Resources */,
+				0FD77FBE2BBFC3F500E68ABE /* DetailTableViewController.xib in Resources */,
 				0F19C5172BB8363C00AA404D /* DonutChartCell.xib in Resources */,
 				0F689D8C2BB719AB006E007D /* LaunchScreen.storyboard in Resources */,
 				0F689D892BB719AB006E007D /* Assets.xcassets in Resources */,
@@ -438,9 +460,11 @@
 				0F689D842BB719AA006E007D /* ViewController.swift in Sources */,
 				0F19C5122BB8362200AA404D /* LineChartCell.swift in Sources */,
 				0F9D0EE52BBC63C100A752F8 /* ChartData.swift in Sources */,
+				0FD77FBD2BBFC3F500E68ABE /* DetailTableViewController.swift in Sources */,
 				0F19C5162BB8363C00AA404D /* DonutChartCell.swift in Sources */,
 				0F689D802BB719AA006E007D /* AppDelegate.swift in Sources */,
 				0F689D822BB719AA006E007D /* SceneDelegate.swift in Sources */,
+				0F8D7A112BBE9EC100C78D91 /* DetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
