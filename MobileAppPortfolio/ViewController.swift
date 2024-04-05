@@ -63,7 +63,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate, DonutChart
             if case let .datumArray(datumArray) = data {
                 cell.delegate = self
                 cell.indexPath = indexPath
-                cell.configure(with: datumArray)
+                cell.configure(with: datumArray, indexPath: indexPath)
             }
             return cell
             
@@ -75,16 +75,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate, DonutChart
             return cell
         }
     }
-
-    func didSelectData(datum: PieChartDataEntry, at indexPath: IndexPath) {
-        
-        if case let .datumArray(datumArray) = chartData[indexPath.section].data {
-            let selectedDatum = datumArray[indexPath.row]
+    
+    func didSelectData(idx: Int) {
+        if case let .datumArray(datumArray) = chartData[0].data {
+            let selectedDatum = datumArray[idx]
             let detailViewController = DetailTableViewController()
             detailViewController.selectedDatum = selectedDatum
+            detailViewController.title = selectedDatum.label
             navigationController?.pushViewController(detailViewController, animated: true)
         }
-        
     }
 }
 

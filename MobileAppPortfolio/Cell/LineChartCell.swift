@@ -37,14 +37,26 @@ class LineChartCell: UITableViewCell, ChartViewDelegate {
         dataSet.fillAlpha = 1
         dataSet.fillColor = UIColor.white
         dataSet.drawFilledEnabled = true
+        dataSet.drawValuesEnabled = true
+        
+        dataSet.highlightEnabled = true
+        dataSet.highlightColor = UIColor.systemGray
+        dataSet.highlightLineWidth = 1.0
+        dataSet.drawVerticalHighlightIndicatorEnabled = true
+        dataSet.drawHorizontalHighlightIndicatorEnabled = false
+        dataSet.circleColors = [UIColor.blue]
+        dataSet.circleHoleColor = UIColor.blue
+        dataSet.colors = [UIColor.blue]
+        dataSet.mode = .cubicBezier
         
         lineChartView.data = LineChartData(dataSet: dataSet)
         lineChartView.xAxis.labelPosition = .bottom
-        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Jan", "Mar", "Mei", "Agu", "Okt", "Des"])
-        lineChartView.xAxis.labelCount = 6
+        lineChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Jan", "" ,"Mar", "","Mei", "","Agu", "", "Okt", "", "Des"])
+        lineChartView.xAxis.labelCount = 11
         lineChartView.xAxis.forceLabelsEnabled = true
         lineChartView.xAxis.granularity = 1
         lineChartView.center = lineView.center
+        
         
         lineChartView.rightAxis.enabled = false
         lineChartView.rightAxis.drawAxisLineEnabled = false
@@ -56,6 +68,7 @@ class LineChartCell: UITableViewCell, ChartViewDelegate {
         lineChartView.setScaleEnabled(false)
         lineChartView.legend.enabled = false
         lineChartView.animate(yAxisDuration: 0.5)
+        lineChartView.frame = lineView.bounds
     }
     
     override func awakeFromNib() {

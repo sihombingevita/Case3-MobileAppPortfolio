@@ -9,13 +9,12 @@ import UIKit
 import Charts
 
 class DetailCell: UITableViewCell {
-
+    
     @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
     
     func configure(with detail: Detail) {
-          leftLabel.text = detail.trxDate.rawValue
-          rightLabel.text = "\(detail.nominal)"
-      }
-    
+        leftLabel.text = detail.trxDate.rawValue
+        rightLabel.text = "\(detail.nominal)"
+    }
 }
